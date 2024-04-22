@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SheCodes Weather App Week Seven</title>
-</head>
-<body>
-  <div class="weather-app">
-    <header>
-      <form class="search-form" id="search=form">
-        <input type="search" placeholder="Enter a city.." required id="search-form-input" class="search-form-input">
-        <input type="submit" value="Search" class="search-form-button">
-      </form>
-    </header>
-    <main>
-      <div class="weather-information">
-        <div>
-          <h1 class="weather-city" class="city">
-            Paris
-          </h1>
-          <p class="weather-details>
-            <span id="time">Monday 15:10,
-            </span>
-          <span id="weather-description">
-            cloudy
-          </span>
-          <br>
-          "Humidity:" <strong class="humidity">48%</strong>
-          ", Wind"
-          <strong class="wind-speed">10.29</strong>
-          </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>My weather application</title>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-form"
+            id="search-form"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather">
+          <div>
+            <h1 class="weather-of-city" id="city">Paris</h1>
+            <p class="weather-details">
+              <span id="time">Saturday 14:45</span>
+              <span id="description">, moderate rain</span>
+              <br />
+              Humidity: <strong id="humidity">87%</strong>, Wind:
+              <strong id="wind-speed">7.2km/h</strong>
+            </p>
+          </div>
+          <div class="weather-container">
+            <div class="weather-icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+                class="weather-icon"
+              />
+            </div>
+            <div class="weather-temperature" id="temperature">24</div>
+            <div class="weather-unit">°C</div>
+          </div>
         </div>
-        <div class="weather-temperature">
-          <div id="emoji"></div>
-          <div class="weather-temperature" id="temperature"></div>
-          <div class="weather-unit">°C</div>
-        </div>
-      </div>
-      <div class="weather-forecast" id="forecast"></div>
-    </main>
-    <footer>
-      "This project was coded by"
-      <a href="#" target="_blank">Palesa Mashego,</a>
-      "is"
-      <a href="#" target="_blank">open-sourced on GitHub</a>
-      "and"
-      <a href="#" target="_blank">hosted on Netlify</a>
-    </footer>
-  </div>
-</body>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="#" target="_blank">Palesa Mashego</a> and is
+        <a
+          href="https://github.com/PalesaMash/vanilla-weather-project"
+          target="_blank"
+        >
+          on GitHub</a
+        >
+        and
+        <a href="https://statuesque-cobbler-28f44a.netlify.app" target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
+  </body>
+  <script src="index.js"></script>
 </html>
