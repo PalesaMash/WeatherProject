@@ -55,8 +55,18 @@ function handleSearchSubmit(event) {
 }
 
 function FormatDay(timestamp){
-let date = new Date =
+let date = new Date(timestamp * 1000);
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+return days [days.getDay()];
 }
+
+function getForecast(city) {
+let apiKey = "b2a5adcct04b33178913oc335f405433";
+let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+axios (apiUrl).then(displayForecast);
+}
+
+function displayForecast(response)
   
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
