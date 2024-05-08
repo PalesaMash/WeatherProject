@@ -66,7 +66,18 @@ let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${ap
 axios (apiUrl).then(displayForecast);
 }
 
-function displayForecast(response)
+function displayForecast(response) {
+let forecastHTML = "";
+
+response.data.daily.forEach(function (day, index) {
+if (index < 5) {
+forecastHtml = 
+  forecastHtml +
+  `
+  <div class="weather-forecast-day"
+}
+}
+}
   
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
