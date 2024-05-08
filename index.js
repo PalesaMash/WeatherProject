@@ -16,6 +16,8 @@ function refreshWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
   weatherIconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -52,7 +54,11 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function FormatDay(timestamp){
+let date = new Date =
+}
+  
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("Paris");
+
