@@ -2,9 +2,11 @@ body {
   background-color: #f9f7fe;
   font-family: "Roboto", sans-serif;
 }
+
 a {
-  color: #885df1;
+  color: #f65282;
 }
+
 .weather-app {
   background: white;
   max-width: 600px;
@@ -15,12 +17,13 @@ a {
 }
 
 header {
-  border-bottom: 1px solid #f9f7fe;
+  border-bottom: 1px solid #f65282;
   padding: 0 0 30px 0;
+  text-align: center;
 }
 
 .search-form {
-  background-color: #f9f7fe;
+  background-color: #f65282;
   border: none;
   border-radius: 6px;
   width: 80%;
@@ -29,7 +32,7 @@ header {
 }
 
 .search-button {
-  background: #885df1;
+  background: #f65282;
   padding: 15px 30px;
   border: none;
   font-size: 16px;
@@ -45,17 +48,19 @@ main {
 .weather {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .weather-of-city {
   margin: 0;
   font-size: 38px;
   line-height: 48px;
+  color: #f65282;
 }
 
 .weather-details {
   font-size: 16px;
-  color: rgba(39, 33, 66, 0.4);
+  color: black;
   line-height: 24px;
   font-weight: 500;
 }
@@ -66,9 +71,10 @@ main {
 
 .weather-container {
   display: flex;
+  align-items: center;
 }
 
-.weather-icon {
+.weather-icon img {
   width: 88px;
   height: 88px;
 }
@@ -77,20 +83,34 @@ main {
   font-size: 88px;
   line-height: 88px;
   font-weight: bold;
+  margin-left: 10px;
+  color: #f65282;
 }
 
 .weather-unit {
   margin-top: 6px;
   font-size: 28px;
+  margin-left: 5px;
+  color: #f65282;
 }
+
 .weather-forecast {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
-.weather-forecast-date {
+.weather-forecast-info {
   text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-forecast-day {
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
   line-height: 20px;
@@ -98,17 +118,15 @@ main {
 }
 
 .weather-forecast-icon {
-  width: 88px;
-  height: 88px;
+  width: 48px;
+  height: 48px;
   display: block;
   margin: 0 auto;
 }
+
 .weather-forecast-temperatures {
-  text-align: center;
   color: #f65282;
   margin-top: 10px;
-  display: flex;
-  justify-content: center;
 }
 
 .weather-forecast-temperature {
